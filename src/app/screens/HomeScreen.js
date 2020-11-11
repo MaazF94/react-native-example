@@ -2,12 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-const HomeScreen = (navigation) => {
+const HomeScreen = (props) => {
   return (
     <View style={styles.container}>
       <Text>Open up HomeScreen.js to start working on your app!</Text>
       <StatusBar style="auto" />
-      <Button onPress={() => navigation.navigate('Second')}
+      <Button onPress={() => {
+                props.navigation.navigate('Second');
+            }
+        }
       title="Go to Second Screen"
       />
     </View>

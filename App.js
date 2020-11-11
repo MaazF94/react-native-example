@@ -3,17 +3,19 @@ import { createStackNavigator } from 'react-navigation-stack';
 import HomeScreen from './src/app/screens/HomeScreen';
 import SecondScreen from './src/app/screens/SecondScreen';
 
-const navigator = createStackNavigator(
+const Navigator = createStackNavigator(
   {
-    Home: HomeScreen,
-    Second: SecondScreen
-  },
-  {
-    initialRouteName: "Home",
-    defaultNavigationOptions: {
-      title: "App"
+    Home: {
+      screen: HomeScreen,
+      initialRouteName: "Home",
+      defaultNavigationOptions: {
+        title: "App"
+      }
+    },
+    Second: {
+      screen: SecondScreen
     }
   }
 );
 
-export default createAppContainer(navigator);
+export default createAppContainer(Navigator);
